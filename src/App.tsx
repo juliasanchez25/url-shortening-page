@@ -1,7 +1,12 @@
-function App() {
+import React from 'react'
+import Navbar from './components/Navbar'
+import Home from './routes/Home'
+
+function App () {
   return (
     <div className="App">
-      <h1>More than just shorter links</h1>
+      <Navbar />
+      <Home />
     </div>
   )
 }
