@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 20px;
+  background-color: #fff;
+  position: relative;
+
+  h3 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 15px;
+    font-size: 2rem;
+  }
+
+  nav {
+    a {
+      text-decoration: none;
+      color: hsl(0, 0%, 75%);
+      padding: 15px;
+      font-weight: 600;
+    }
+
+    .navbar-links {
+      display: inline-block;
+      align-items: center;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+    button {
+      border: none;
+      border-radius: 50px;
+      width: 140px;
+      padding: 12px;
+      color: #fff;
+      background-color: hsl(180, 66%, 49%);
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

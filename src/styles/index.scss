@@ -30,7 +30,24 @@ p {
   width: 100%;
   background-color: #fff;
 
+  @media screen and (min-width: 1000px) {
+    justify-content: flex-start;
+    text-align: left;
 
+    &__items {
+      max-width: 600px;
+      word-wrap: break-word;
+      margin-left: 5vw;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      margin-top: -25px;
+    }
+  }
 
   button {
     margin-bottom: 8vh;
@@ -44,6 +61,23 @@ p {
   border-radius: 10px;
   margin: 10px;
   background-color: hsl(257, 27%, 26%);
+
+  @media screen and (min-width:1000px) {
+    width: 80%;
+    margin: 0 auto;
+
+    &__item {
+      display: flex;
+
+      input {
+        width: 100%;
+      }
+
+      button {
+        width: 20%;
+      }
+    }
+  }
 
   &__item {
     display: inline-block;
@@ -79,23 +113,39 @@ p {
   margin-top: 12vh;
   text-align: center;
 
-  &__item {
-    background-color: #fff;
-    margin: 0 auto;
-    margin-bottom: 15vh;
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 20px;
-    border-radius: 10px;
-
-    h3 {
-      font-size: 1.3rem;
-      margin-top: 10vh;
-      margin-bottom: 3vh;
+  @media screen and (min-width: 1000px) {
+    &__list-items {
+      display: flex;
+      justify-content: center;
     }
 
-    p {
-      margin-bottom: 3vh;
+    &__item {
+      width: 100%;
+      max-width: 300px;
+      word-wrap: break-word;
+    }
+  }
+
+  &__list-items {
+    &__item {
+      background-color: #fff;
+      margin: 0 auto;
+      margin-bottom: 15vh;
+      margin-left: 15px;
+      margin-right: 15px;
+      padding: 20px;
+      width: 500px;
+      border-radius: 10px;
+  
+      h3 {
+        font-size: 1.3rem;
+        margin-top: 10vh;
+        margin-bottom: 3vh;
+      }
+  
+      p {
+        margin-bottom: 3vh;
+      }
     }
   }
 }
@@ -104,6 +154,12 @@ p {
   padding: 50px;
   background-color: hsl(257, 27%, 26%);
   text-align: center;
+
+  @media screen and (min-width: 1000px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
 
   h1 {
     font-size: 1.4rem;
@@ -124,6 +180,11 @@ footer {
   .footer-links-container {
     display: inline-block;
     justify-content: space-between;
+
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      justify-content: space-around;
+    }
 
     &__item {
       margin-bottom: 5vh;
