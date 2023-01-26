@@ -1,6 +1,6 @@
-import React from "react";
-import ButtonComponent from "../components/ButtonComponent";
-import "../styles/index.scss";
+import React from 'react'
+import ButtonComponent from '../components/ButtonComponent'
+import '../styles/index.scss'
 
 const Home = () => {
   return (
@@ -96,7 +96,7 @@ const Home = () => {
         </div>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
