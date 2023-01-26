@@ -4,7 +4,7 @@ import '../styles/ButtonComponent.scss'
 const ButtonComponent = () => {
   return (
     <div>
-      <button>Get Started</button>
+      <button className='button-get-started'>Get Started</button>
     </div>
   )
 }

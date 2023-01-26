@@ -7,16 +7,148 @@
   font-family: "Poppins", sans-serif;
 }
 
-.home-container {
+body {
+  background-color: hsl(0, 0%, 93%);
+}
+
+h1,p {
+  padding: 15px;
+}
+
+h1 {
+  color: hsl(260, 8%, 14%);
+}
+
+p {
+  margin-top: -15px;
+  color: hsl(257, 7%, 63%);
+}
+
+.introduction-home-container {
   display: inline-block;
   text-align: center;
+  width: 100%;
+  background-color: #fff;
 
-  h1 {
-    color: hsl(260, 8%, 14%);
-  }
 
-  p {
-    color: hsl(257, 7%, 63%);
+
+  button {
+    margin-bottom: 8vh;
   }
 }
 
+.short-link-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: hsl(257, 27%, 26%);
+
+  &__item {
+    display: inline-block;
+
+    input,button {
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      width: 80%;
+      height: 45px;
+      font-weight: 600;
+    }
+  
+    input {
+      margin-top: 4vh;
+      color: hsl(0, 0%, 61%);
+      font-size: 15px;
+    }
+  
+    button {
+      margin-top: 2vh;
+      margin-bottom: 4vh;
+      color: #fff;
+      font-size: 1.1rem;
+      background-color: hsl(180, 66%, 49%);
+      cursor: pointer;
+    }
+  }
+}
+
+.advanced-statistics-container {
+  margin-top: 12vh;
+  text-align: center;
+
+  &__item {
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 15vh;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 20px;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 10vh;
+      margin-bottom: 3vh;
+    }
+
+    p {
+      margin-bottom: 3vh;
+    }
+  }
+}
+
+.boost-links-container {
+  padding: 50px;
+  background-color: hsl(257, 27%, 26%);
+  text-align: center;
+
+  h1 {
+    font-size: 1.4rem;
+    color: #fff;
+  }
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  h1 {
+    color: #fff;
+  }
+
+  .footer-links-container {
+    display: inline-block;
+    justify-content: space-between;
+
+    &__item {
+      margin-bottom: 5vh;
+
+      h3,a {
+        color: #fff;
+      }
+
+      h3 {
+        margin-top: 5vh;
+        margin-bottom: 3vh;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+        opacity: .8;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .social-medias-container {
+    display: flex;
+    justify-content: center;
+  }
+}
