@@ -10,17 +10,9 @@ const Navbar = () => {
           Shortly
         </a>
         <div className="navbar-container__menu">
-          <ul>
-            <li className="navbar-container__item">
-              <a href="">Features</a>
-            </li>
-            <li className="navbar-container__item">
-              <a href="">Pricing</a>
-            </li>
-            <li className="navbar-container__item">
-              <a href="">Resources</a>
-            </li>
-          </ul>
+          <a href="">Features</a>
+          <a href="">Pricing</a>
+          <a href="">Resources</a>
           <div className="navbar-container__buttons">
             <a href="">Login</a>
             <button>Sign Up</button>

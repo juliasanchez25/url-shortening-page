@@ -16,6 +16,7 @@ const Home = () => {
     const { short_link } = result;
     const urlData: UrlProps = {
       url_link: short_link,
+      originalUrl,
     };
 
     setUrls([...urls, urlData]);
@@ -39,7 +40,15 @@ const Home = () => {
       {urls?.map((url, index) => {
         return (
           <div key={index} className="short-url-list-container">
-            {url && <a href="#">{url.url_link}</a>}
+            <div className="short-url-list-container__items">
+              <div className="short-url-list-container__items__original">
+                {url && <a href="#">{url.originalUrl}</a>}
+              </div>
+              <div className="short-url-list-container__items__short">
+                {url && <a href="#">{url.url_link}</a>}
+              </div>
+              <button>Copy</button>
+            </div>
           </div>
         );
       })}
