@@ -1,8 +1,27 @@
-import React from 'react'
-import ButtonComponent from '../components/ButtonComponent'
-import '../styles/index.scss'
+import React from "react";
+import ButtonComponent from "../components/ButtonComponent";
+import UrlShortening from "../components/UrlShorteningComponent";
+import "../styles/index.scss";
+import { useState } from "react";
+import { UrlProps } from "../types/url";
 
 const Home = () => {
+  const [urls, setUrls] = useState<UrlProps[]>([]);
+
+  const loadUrl = async (originalUrl: string) => {
+    const res = await fetch(
+      `https://api.shrtco.de/v2/shorten?url=${originalUrl}`
+    );
+    const { result } = await res.json();
+    const { short_link } = result;
+    const urlData: UrlProps = {
+      url_link: short_link,
+    };
+
+    setUrls([...urls, urlData]);
+    console.log(result);
+  };
+
   return (
     <div>
       <div className="introduction-home-container">
@@ -15,12 +34,16 @@ const Home = () => {
           <ButtonComponent />
         </div>
       </div>
-      <div className="short-link-container">
-        <div className="short-link-container__item">
-          <input type="text" placeholder="Shorter a link here..."></input>
-          <button>Shorten it!</button>
-        </div>
-      </div>
+
+      <UrlShortening loadUrl={loadUrl} />
+      {urls?.map((url, index) => {
+        return (
+          <div key={index} className="short-url-list-container">
+            {url && <a href="#">{url.url_link}</a>}
+          </div>
+        );
+      })}
+
       <div className="advanced-statistics-container">
         <h1>Advanced Statistics</h1>
         <p>
@@ -96,7 +119,7 @@ const Home = () => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
