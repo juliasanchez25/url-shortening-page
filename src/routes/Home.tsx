@@ -4,6 +4,7 @@ import UrlShortening from "../components/UrlShorteningComponent";
 import "../styles/index.scss";
 import { useState } from "react";
 import { UrlProps } from "../types/url";
+import facebook from "../public/img/icon-facebook.svg"
 
 const Home = () => {
   const [urls, setUrls] = useState<UrlProps[]>([]);
@@ -59,8 +60,8 @@ const Home = () => {
           Track how your links are performing across the web with our advanced
           statistics dashboard
         </p>
-        <div className="advanced-statistics-container__list-items">
-          <div className="advanced-statistics-container__list-items__item">
+        <div className="advanced-statistics-container__list">
+          <div className="advanced-statistics-container__list__item">
             <h3>Brand Recognition</h3>
             <p>
               Boost your brand recognition with each click. Generic links don't
@@ -68,7 +69,7 @@ const Home = () => {
               content.
             </p>
           </div>
-          <div className="advanced-statistics-container__list-items__item">
+          <div className="advanced-statistics-container__list__item">
             <h3>Detailed Records</h3>
             <p>
               Gain insights into who is clicking your links. Knowing when and
@@ -76,7 +77,7 @@ const Home = () => {
               decisions.
             </p>
           </div>
-          <div className="advanced-statistics-container__list-items__item">
+          <div className="advanced-statistics-container__list__item">
             <h3>Fully Customizable</h3>
             <p>
               Improve brand awaraness and content discoverability through
@@ -85,10 +86,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="boost-links-container">
         <h1>Boost your links today</h1>
         <ButtonComponent />
       </div>
+
       <footer>
         <h1>Shortly</h1>
         <div className="footer-links-container">
@@ -112,6 +115,7 @@ const Home = () => {
             <a href="">Contact</a>
           </div>
         </div>
+
         <div className="social-medias-container">
           <div className="social-medias-container__item">
             <p>facebook</p>
